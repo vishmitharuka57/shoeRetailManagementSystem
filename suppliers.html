@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Shoes - Supplier Management</title>
+    <!------------------------css style------------------->
+    <link rel="stylesheet" href="assets/css/supplier.css">
+</head>
+<body>
+     <!------------------------NAvigation menu------------->
+     <div class="container">
+        <div class="navigation">
+            <ul>
+                <li><a href="#"> 
+                    <span class="icon" id="logo1"><ion-icon name="footsteps-outline"></ion-icon></span>
+                    <span class="title">Hello Shoe</span>
+                </a></li>
+
+                <li><a href="dashboard.html"> 
+                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <span class="title">Dashboard</span>
+                </a></li>
+                <li><a href="sales.html" class="link active"> 
+                    <span class="icon"><ion-icon name="bag-check-outline"></ion-icon></span>
+                    <span class="title">Sales</span>
+                </a></li>
+
+                <li><a href="suppliers.html"> 
+                    <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                    <span class="title">Suppliers</span>
+                </a></li>
+                <li><a href="customer.html"> 
+                    <span class="icon"><ion-icon name="man-outline"></ion-icon></span>
+                    <span class="title">Customers</span>
+                </a></li>
+                <li><a href="employee.html"> 
+                    <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                    <span class="title">Employees</span>
+                </a></li>
+
+                <li><a href="iventory.html"> 
+                    <span class="icon"><ion-icon name="cube-outline"></ion-icon></span>
+                    <span class="title">Iventory</span>
+                </a></li>
+
+                <li><a href="user.html"> 
+                    <span class="icon"><ion-icon name="person-outline"></ion-icon></ion-icon></span>
+                    <span class="title">Users</span>
+                </a></li>
+
+                <li><a href="signout.html"> 
+                    <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                    <span class="title">Sign Out</span>
+                </a></li>
+
+            </ul>
+        </div>
+    </div>
+    <!------------------------MAIN----------------------->
+    <div class="main">
+        <div class="topbar">
+            <div class="toggle">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
+
+            <div class="search">
+                <label>
+                    <input type="text" placeholder="search here">
+                    <ion-icon name="search-outline"></ion-icon>
+                </label>
+            </div>
+
+            <div class="user">
+                <img src="assets/image/admin.jpg" alt="admin image">
+            </div>
+        </div>
+        <!------------------------Sales ----------------------->
+     <div class="salesContainer">
+        <!---------------------Popup Container-------------->
+        <!-- Popup container -->
+        <div id="popup-container" class="popup-container">
+            <div class="popup-content">
+                    <span class="close" onclick="closePopup()">&times;</span> <!-- Close button -->
+                    <h2>Add New Supplier</h2>
+                    <div class="orderForm">
+                    <input type="text" placeholder="Supplier code" id="input1">
+                    <input type="text" placeholder="Supplier name " id="input2">
+                    <input type="text" placeholder="Category" id="input3">
+                    <input type="text" placeholder="Address Line 01 " id="input4">
+                    <input type="number" placeholder="Address Line 02" id="input5">
+                    <input type="number" placeholder="Address Line 03" id="input6">
+                    <input type="number" placeholder="Address Line 04" id="input7">
+                    <input type="number" placeholder="Contact No.1 " id="input8">
+                    <input type="date" placeholder="Contact No.2" id="input9">
+                    <input type="number" placeholder="Contact No.1 " id="input10">
+                    <input type="submit" value="Add New Supplier" id="input11" class="placeOrderBtn">
+            </div>
+           
+        </div>
+
+        <!--=============================================================================-->
+        
+        
+    </div>
+          <!-----------------------Supplier Detail List----------->         
+    <div class="details">
+         <!-- Your main page content -->
+         <div class="functionbtns">
+            <button onclick="showPopup()" class="orderBtn">New Supplier</button>
+            <button onclick="showPopup1()" class="orderBtn">Delete Supplier</button>
+            <button onclick="showPopup2()" class="orderBtn">Update Supplier</button>
+         </div>
+      
+        
+        <div class="recentOrders">
+            <div class="cardHeader">
+                <h2>Local Suppliers</h2>
+                <a href="#" class="btn">View All</a>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <td>Supplier code</td>
+                        <td>Supplier Name</td>
+                        <td>Category</td>
+                        <td>Address Line 01 </td>
+                        <td>Address Line 02</td>
+                        <td>Address Line 03</td>
+                        <td>Address Line 04</td>
+                        <td>Contact No.1</td>
+                        <td>Contact No.2</td>
+                        <td>Email </td>
+            
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>LS-0001</td>
+                        <td>Samith Kottage</td>
+                        <td>DSI </td>
+                        <td>no.23 A,</td>
+                        <td> Mendis Rd,</td>
+                        <td> One GalleFace,</td>
+                        <td> Colombo</td>
+                        <td>+94 11 2 6374853</td>
+                        <td>+94 77 123 8432</td>
+                        <td>samith@dsi.com</td>
+                       
+                    </tr>
+
+                    <tr>
+                        <td>LS-0002</td>
+                        <td>Darshan Thavaraj</td>
+                        <td>Bata</td>
+                        <td>no.7,</td>
+                        <td> Sugathapala Rd,</td>
+                        <td>Havelock Citymall,</td>
+                        <td> Colombo</td>
+                        <td> +94 34 495 4323</td>
+                        <td> +94 70 736 7315</td>
+                        <td>Service@lk.bata.com</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+        <div class="recentOrders">
+            <div class="cardHeader">
+                <h2>International Suppliers</h2>
+                <a href="#" class="btn">View All</a>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <td>Supplier code</td>
+                        <td>Supplier Name</td>
+                        <td>Category</td>
+                        <td>Address Line 01 </td>
+                        <td>Address Line 02</td>
+                        <td>Address Line 03</td>
+                        <td>Address Line 04</td>
+                        <td>Contact No.1</td>
+                        <td>Contact No.2</td>
+                        <td>Email </td>
+            
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>IS-0001</td>
+                        <td>John Smith</td>
+                        <td>Nike Shoe</td>
+                        <td>no.23 A,</td>
+                        <td> Beaverton,</td>
+                        <td> One Bowerman Dr,</td>
+                        <td> United States</td>
+                        <td>1-212-367-4447</td>
+                        <td>1-212-367-4448</td>
+                        <td>JSmith@nike.com</td>
+                       
+                    </tr>
+
+                    <tr>
+                        <td>IS-0002</td>
+                        <td>Horst Dassler</td>
+                        <td>Adidas Shoe</td>
+                        <td>no.7,</td>
+                        <td> Herzogenaurach,</td>
+                        <td>Adi-Dassler-Strasse 1,</td>
+                        <td> Germany</td>
+                        <td> +44 2035 143305</td>
+                        <td> +44 20 7365 7315</td>
+                        <td>Service@lk.onlineshop.adidas.com</td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+  
+<!------------------------js-------------------------->
+<script>
+    // JavaScript Functionality
+    // Function to show the popup
+    function showPopup() {
+        document.getElementById('popup-container').style.display = 'block';
+    }
+    function showPopup1() {
+        document.getElementById('popup-container').style.display = 'block';
+    }
+    function showPopup2() {
+        document.getElementById('popup-container').style.display = 'block';
+    }
+
+    // Function to close the popup
+    function closePopup() {
+        document.getElementById('popup-container').style.display = 'none';
+    }
+</script>
+<!------------------------js-------------------------->
+    <script src="assets/js/supplier.js"> </script>
+<!------------------------icons----------------------->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
+</body>
+</html>

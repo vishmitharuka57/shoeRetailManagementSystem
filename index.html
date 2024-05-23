@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello,Shoes(Pvt)Ltd | login</title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css">
+    <link rel="stylesheet" href="assets/css/login.css">
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="nav">
+            <div class="nav-logo">
+                <p>HELLO SHOE</p>
+            </div>
+            <div class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#" class="link active">Home</a></li>
+                    <li><a href="#" class="link">Blog</a></li>
+                    <li><a href="#" class="link">Service</a></li>
+                    <li><a href="#" class="link">About</a></li>
+
+                </ul>
+            </div>
+            <div class="nav-button">
+                <button class="btn white-btn" id="loginBtn" onclick="login()">Sign In</button>
+                <button class="btn" id="registerBtn" onclick="register()">Register</button>
+            </div>
+            <div class="nav-menu-btn">
+                <i class='bx bx-menu' onclick="myMenuFunction()"></i>
+            </div>
+        </nav>
+   
+    </div>
+   <!-------------------Form box ------------------>
+    <div class="form-box">
+
+         <!-------------------login form ------------------>
+         <div class="login-container" id="login">
+            <div class="top">
+                <span>Don't have an account? <a href="#" onclick="register()">Sign Up</a></span>
+                <header>Login</header>
+            </div>
+            <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Username or Email" id="logUsername">
+                    <i class='bx bx-user'  ></i>
+            </div>
+            <div class="input-box">
+                    <input type="password" class="input-field" placeholder="Password" id="logPassword">
+                    <i class='bx bx-lock-alt' ></i>
+            </div>
+            <div class="input-box">
+                <button class="submit"  id="logSigninBtn" onclick="SignIn()"><a href="dashboard.html">Sign In</a></button>
+            </div>
+            <div class="two-col">
+                    <div class="one">
+                        <input type="checkbox" id="login-check">
+                        <label for="login-check">Remember me</label>
+                    </div>
+                    <div class="two">
+                       <label ><a href="#">Forgot Password?</a></label>
+                    </div>
+            </div>
+        </div>
+
+         <!-------------------registration form ------------------>
+        <div class="register-container" id="register">
+            <div class="top">
+                <span>Have an account? <a href="#" onclick="login()">Login</a></span>
+                <header>Sign Up</header>
+            </div>
+            <div class="two-forms">
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="First Name" id="regFirstName">
+                    <i class='bx bx-user-circle'  ></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Last Name" id="regLastName">
+                    <i class='bx bx-user-circle'  ></i>               
+                </div>
+            </div>
+
+                <div class="input-box">
+                    <input type="text" class="input-field" placeholder="Email" id="regEmail">
+                    <i class='bx bx-envelope'  ></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" class="input-field" placeholder="Password" id="regPassword">
+                    <i class='bx bx-lock-alt' ></i>
+                </div>
+                <div class="input-box">
+                    <input type="submit" class="submit"  value="Register" id="RegSignupBtn" onclick="SignUp">
+                </div>
+                <div class="two-col">
+                    <div class="one">
+                        <input type="checkbox" id="register-check">
+                        <label for="register-check">Remember me</label>
+                    </div>
+                    <div class="two">
+                       <label ><a href="#">Terms & Conditions</a></label>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="assets/js/login.js"></script>
+</body>
+</html>

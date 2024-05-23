@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    font-family: "Ubuntu", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --pink:rgb(15, 14, 14);
+    --white:white;
+    --gray:rgb(173, 170, 170);
+    --black1:black;
+    --black2:rgb(58, 56, 56);
+}
+body{
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+.container{
+    position: relative;
+    width: 100%;
+}
+.navigation{
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    background:var(--pink);
+    border-left:10px solid var(--pink) ;
+    transition: 0.5s;
+    overflow: hidden;
+}
+.navigation.active{
+    width: 80px;
+}
+.navigation ul{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+.navigation ul li{
+    position: relative;
+    width: 100%;
+    list-style: none;
+    border-top-left-radius: 30px;
+}
+.navigation ul li:hover,
+.navigation ul li .hovered{
+    background: var(--white);
+}
+.navigation ul li:nth-child(1){
+    font-size: 30px;
+    font-weight: bolder;
+    margin-bottom: 40px;
+    pointer-events: none;
+}
+
+.navigation ul li a {
+    position: relative;
+    display: block;
+    width: 100%;
+    display: flex;
+    text-decoration: none;
+    color: var(--white);
+}
+.navigation ul li:hover a,
+.navigation ul li .hovered a{
+    color: var(--pink);
+}
+.navigation ul li a .icon{
+    position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px;
+    line-height: 75px;
+    text-align: center;
+}
+.navigation ul li a .icon ion-icon{
+    font-size: 1.75rem;
+}
+.navigation ul li a .title{
+    position: relative;
+    display: block;
+    padding: 0 10px;
+    height: 60px;
+    line-height: 60px;
+    text-align: start;
+    white-space: nowrap;
+}

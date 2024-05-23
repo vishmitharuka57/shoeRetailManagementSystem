@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Shoes - Employee Management</title>
+    <!------------------------css style------------------->
+    <link rel="stylesheet" href="assets/css/employee.css">
+</head>
+<body>
+     <!------------------------NAvigation menu------------->
+     <div class="container">
+        <div class="navigation">
+            <ul>
+                <li><a href="#"> 
+                    <span class="icon" id="logo1"><ion-icon name="footsteps-outline"></ion-icon></span>
+                    <span class="title">Hello Shoe</span>
+                </a></li>
+
+                <li><a href="dashboard.html"> 
+                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <span class="title">Dashboard</span>
+                </a></li>
+                <li><a href="sales.html" class="link active"> 
+                    <span class="icon"><ion-icon name="bag-check-outline"></ion-icon></span>
+                    <span class="title">Sales</span>
+                </a></li>
+
+                <li><a href="suppliers.html"> 
+                    <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                    <span class="title">Suppliers</span>
+                </a></li>
+                <li><a href="customer.html"> 
+                    <span class="icon"><ion-icon name="man-outline"></ion-icon></span>
+                    <span class="title">Customers</span>
+                </a></li>
+                <li><a href="employee.html"> 
+                    <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                    <span class="title">Employees</span>
+                </a></li>
+
+                <li><a href="iventory.html"> 
+                    <span class="icon"><ion-icon name="cube-outline"></ion-icon></span>
+                    <span class="title">Iventory</span>
+                </a></li>
+
+                <li><a href="user.html"> 
+                    <span class="icon"><ion-icon name="person-outline"></ion-icon></ion-icon></span>
+                    <span class="title">Users</span>
+                </a></li>
+
+                <li><a href="signout.html"> 
+                    <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                    <span class="title">Sign Out</span>
+                </a></li>
+
+            </ul>
+        </div>
+    </div>
+    <!------------------------MAIN----------------------->
+    <div class="main">
+        <div class="topbar">
+            <div class="toggle">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
+
+            <div class="search">
+                <label>
+                    <input type="text" placeholder="search here">
+                    <ion-icon onclick="searchEmployee()" name="search-outline" ></ion-icon>
+                </label>
+            </div>
+
+            <div class="user">
+                <img src="assets/image/admin.jpg" alt="admin image">
+            </div>
+        </div>
+        <!------------------------Sales ----------------------->
+     <div class="salesContainer">
+        <!---------------------Popup Container-------------->
+        <!-- Popup container -->
+        <div id="popup-container" class="popup-container">
+            <div class="popup-content">
+                    <span class="close" onclick="closePopup()">&times;</span> <!-- Close button -->
+                    <h2>Add New Employee</h2>
+                    <div class="orderForm">
+                        <input type="text" placeholder="Employee Code" disabled id="input1">
+                        <input type="text" placeholder="Employee name" id="input2">
+                        <input type="text" placeholder="Employee pic" id="input3">
+                        <input type="text" placeholder="Gender" id="input4">
+                        <input type="text" placeholder="Status" id="input5">
+                        <input type="text" placeholder="Designation" id="input6">
+                        <input type="text" placeholder="Access Role" id="input7">
+                        <input type="text" placeholder="DOB" id="input8">
+                        <input type="text" placeholder="Date of Join" id="input9">
+                        <input type="text" placeholder="Attached Branch" id="input10">
+                        <input type="text" placeholder="Address Line 01" id="input11">
+                        <input type="text" placeholder="Address Line 02" id="input12">
+                        <input type="text" placeholder="Address Line 03" id="input13">
+                        <input type="text" placeholder="Address Line 04" id="input14">
+                        <input type="text" placeholder="Contact No. " id="input15">
+                        <input type="text" placeholder="Email" id="input16">
+                        <input type="text" placeholder="Inform in case of emergency " id="input17">
+                        <input type="text" placeholder="Emergency Contact " id="input18">
+                        <input type="button" value="Add Employee" id="input19" class="placeOrderBtn" onclick="saveEmployee()">
+                        <button onclick="deleteEmployee()" class="orderBtn">Delete Employee</button>
+                        <button onclick="updateEmployee()" class="orderBtn">Update Employee</button>
+                    </div>
+            </div>
+           
+        </div>
+    </div>
+
+
+
+    <!------------------------Order Detail List----------->         
+    <div class="details">
+        <div class="recentOrders">
+            <div class="cardHeader">
+                <h2>Recent Employees</h2>
+                <a href="#" class="btn" onclick="getAllEmployee()">View All</a>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <td>Employee code</td>
+                        <td>Employee name</td>
+                        <td>pic</td>
+                        <td>Gender</td>
+                        <td>Status</td>
+                        <td>Designation</td>
+                        <td>Access Role</td>
+                        <td>DOB</td>
+                        <td>Join Date</td>
+                        <td>Attached Branch </td>
+                        <td>Address 01</td>
+                        <td>Address 02</td>
+                        <td>Address 03</td>
+                        <td>Address 04</td>
+                        <td>Contact No</td>
+                        <td>Email</td>
+                        <td>emergency name</td>
+                        <td>Emergency Contact</td>
+                    </tr>
+                </thead>
+
+                <tbody id="empTable"> </tbody>
+            </table>
+        </div>
+    </div>
+
+    <button onclick="showPopup()" class="orderBtn">New Employee</button>
+
+        
+
+<!------------------------js-------------------------->
+    <script>
+        // JavaScript Functionality
+        // Function to show the popup
+        function showPopup() {
+            document.getElementById('popup-container').style.display = 'block';
+        }
+
+        // Function to close the popup
+        function closePopup() {
+            document.getElementById('popup-container').style.display = 'none';
+        }
+    </script>
+         <script src="assets/js/jquery-3.7.1.min.js"></script>
+        <script src="assets/js/employee.js"></script>
+    <!------------------------icons----------------------->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+ </body>
+</html>

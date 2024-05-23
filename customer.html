@@ -1,0 +1,199 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Shoes - Customer Management</title>
+    <!------------------------css style------------------->
+    <link rel="stylesheet" href="assets/css/customer.css">
+</head>
+<body>
+     <!------------------------NAvigation menu------------->
+     <div class="container">
+        <div class="navigation">
+            <ul>
+                <li><a href="#"> 
+                    <span class="icon" id="logo1"><ion-icon name="footsteps-outline"></ion-icon></span>
+                    <span class="title">Hello Shoe</span>
+                </a></li>
+
+                <li><a href="dashboard.html"> 
+                    <span class="icon"><ion-icon name="home-outline"></ion-icon></span>
+                    <span class="title">Dashboard</span>
+                </a></li>
+                <li><a href="sales.html" class="link active"> 
+                    <span class="icon"><ion-icon name="bag-check-outline"></ion-icon></span>
+                    <span class="title">Sales</span>
+                </a></li>
+
+                <li><a href="suppliers.html"> 
+                    <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                    <span class="title">Suppliers</span>
+                </a></li>
+                <li><a href="customer.html"> 
+                    <span class="icon"><ion-icon name="man-outline"></ion-icon></span>
+                    <span class="title">Customers</span>
+                </a></li>
+                <li><a href="employee.html"> 
+                    <span class="icon"><ion-icon name="people-outline"></ion-icon></span>
+                    <span class="title">Employees</span>
+                </a></li>
+
+                <li><a href="iventory.html"> 
+                    <span class="icon"><ion-icon name="cube-outline"></ion-icon></span>
+                    <span class="title">Iventory</span>
+                </a></li>
+
+                <li><a href="user.html"> 
+                    <span class="icon"><ion-icon name="person-outline"></ion-icon></ion-icon></span>
+                    <span class="title">Users</span>
+                </a></li>
+
+                <li><a href="signout.html"> 
+                    <span class="icon"><ion-icon name="log-out-outline"></ion-icon></span>
+                    <span class="title">Sign Out</span>
+                </a></li>
+
+            </ul>
+        </div>
+    </div>
+    <!------------------------MAIN----------------------->
+    <div class="main">
+        <div class="topbar">
+            <div class="toggle">
+                <ion-icon name="menu-outline"></ion-icon>
+            </div>
+
+            <div class="search">
+                <label>
+                    <input type="text" placeholder="search here">
+                    <ion-icon name="search-outline"></ion-icon>
+                </label>
+            </div>
+
+            <div class="user">
+                <img src="assets/image/admin.jpg" alt="admin image">
+            </div>
+        </div>
+        <!------------------------Customers ----------------------->
+     <div class="salesContainer">
+        <!---------------------Popup Container-------------->
+        <!-- Popup container -->
+        <div id="popup-container" class="popup-container">
+            <div class="popup-content">
+                    <span class="close" onclick="closePopup()">&times;</span> <!-- Close button -->
+                    <h2>Add New Customer</h2>
+                    <div class="orderForm">
+                    <input type="text" placeholder="Customer code " id="input1">
+                    <input type="text" placeholder="Customer name" id="input2">
+                    <input type="text" placeholder="Gender" id="input3">
+                    <input type="text" placeholder="Join date as a loyalty
+                    customer" id="input4">
+                    <input type="number" placeholder="Level" id="input5">
+                    <input type="number" placeholder="Total points" id="input6">
+                    <input type="number" placeholder="DOB " id="input7">
+                    <input type="number" placeholder="Address Line 01" id="input8">
+                    <input type="date" placeholder="Address Line 02" id="input9">
+                    <input type="number" placeholder="Address Line 03" id="input10">
+                    <input type="text" placeholder="Address Line 04" id="input11">
+                    <input type="date" placeholder="Contact No. " id="input12">
+                    <input type="number" placeholder="Email" id="input13">
+                    <input type="text" placeholder="Recent purchase date & time" id="input14">
+                    <input type="submit" value="Add Customer" id="input15" class="placeOrderBtn">
+            </div>
+           
+        </div>
+    </div>
+
+
+
+    <!------------------------Order Detail List----------->         
+    <div class="details">
+        <div class="recentOrders">
+            <div class="cardHeader">
+                <h2>Recent Customers</h2>
+                <a href="#" class="btn">View All</a>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <td>Customer code</td>
+                        <td>Customer name</td>
+                        <td>Gender</td>
+                        <td>Join Date (as L.Customer)</td>
+                        <td>Level</td>
+                        <td>Total points</td>
+                        <td>DOB</td>
+                        <td>Address Line 01</td>
+                        <td>Address Line 02</td>
+                        <td>Address Line 03</td>
+                        <td>Address Line 04</td>
+                        <td>Contact No.</td>
+                        <td>Email</td>
+                        <td>Recent purchase date and time</td>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>C-0001</td>
+                        <td>A.W.Rupasinha</td>
+                        <td>female</td>
+                        <td>02/01/2024</td>
+                        <td>1</td>
+                        <td>21</td>
+                        <td>23/04/1993</td>
+                        <td>no.45.</td>
+                        <td>Hatharasinha Rd,</td>
+                        <td>Aguruwathotha,</td>
+                        <td>Horana</td>
+                        <td>+94 77-1232233</td>
+                        <td>awrupasinha@gmail.com</td>
+                        <td>05/05/2024, 09.45am</td>
+                    </tr>
+
+                    <tr>
+                        <td>C-0001</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+   <!-- Your main page content -->
+<button onclick="showPopup()" class="orderBtn">New Customer</button>
+
+<!------------------------js-------------------------->
+<script>
+    // JavaScript Functionality
+    // Function to show the popup
+    function showPopup() {
+        document.getElementById('popup-container').style.display = 'block';
+    }
+
+    // Function to close the popup
+    function closePopup() {
+        document.getElementById('popup-container').style.display = 'none';
+    }
+</script>
+        <script src="assets/js/customer.js"></script>
+<!------------------------icons----------------------->
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script> 
+</body>
+</html>
