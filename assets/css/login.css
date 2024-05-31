@@ -130,7 +130,7 @@ header{
     font-size: 15px;
     background-color: rgb(250, 248, 249);
     color: rgb(2, 2, 2);
-    height: 45px;
+    height: 50px;
     width: 100%;
     padding: 0 10px 0 45px;
     border: none;
@@ -138,9 +138,10 @@ header{
     outline: none;
     transition: 0.2s ease;
 }
+
 .input-field:hover, .input-field:focus{
     background-color: rgb(233, 227, 228);
-    border: 2px solid rgb(43, 40, 40);
+    border: 2px solid #08caf1;;
 }
 ::-webkit-input-placeholder{
     color:rgb(0, 0, 0);
@@ -153,10 +154,13 @@ header{
    color: rgb(10, 10, 10);
   
 }
+a{
+    text-decoration: none;
+    color: rgb(255, 252, 252);
+}
 .submit{
     font-size: 15px;
     font-weight: 500;
-    color: rgb(255, 252, 252);
     height: 45px;
     width: 100%;
     border: none;
@@ -167,7 +171,7 @@ header{
     transition: 0.3s ease-in-out;
 }
 .submit:hover{
-    background:rgb(163, 159, 159) ;
+    background: rgb(192, 187, 187);
     box-shadow: 1px 3px 3px 3px rgb(10, 10, 10);
 }
 .two-col{

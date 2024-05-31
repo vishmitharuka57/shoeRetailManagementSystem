@@ -84,19 +84,21 @@
                     <span class="close" onclick="closePopup()">&times;</span> <!-- Close button -->
                     <h2>Place New Iventory</h2>
                     <div class="orderForm">
-                    <input type="text" placeholder="Item Code" id="input1">
+                    <input type="number" placeholder="Item Code" id="input1">
                     <input type="text" placeholder="Item Desc " id="input2">
                     <input type="text" placeholder="Item Picture " id="input3">
                     <input type="text" placeholder="Category" id="input4">
                     <input type="number" placeholder="Size" id="input5">
                     <input type="number" placeholder="Supplier Code" id="input6">
-                    <input type="number" placeholder="Supplier name" id="input7">
+                    <input type="text" placeholder="Supplier name" id="input7">
                     <input type="number" placeholder="Unit price - Sale " id="input8">
-                    <input type="date" placeholder="Unit price - Buy" id="input9">
+                    <input type="number" placeholder="Unit price - Buy" id="input9">
                     <input type="number" placeholder="Expected Profit" id="input10">
                     <input type="text" placeholder="Profit margin" id="input11">
                     <input type="text" placeholder="Status " id="input12">
-                    <input type="submit" value="Place New Iventory" id="input13" class="placeOrderBtn">
+                        <button onclick="saveItem()" class="orderBtn"  id="input13">Add New Item</button>
+                        <button onclick="deleteItem()" class="orderBtn"  id="input14">Delete Item</button>
+                        <button onclick="updateItem()" class="orderBtn"  id="input15">Update Item</button>
             </div>
            
         </div>

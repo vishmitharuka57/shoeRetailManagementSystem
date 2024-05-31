@@ -21,6 +21,7 @@ toggle.onclick = function(){
     navigation.classList.toggle("active");
     main.classList.toggle("active");
 }
+
 function saveEmployee(){
     let name = $('#input2').val();
     let pic = $('#input3').val();
